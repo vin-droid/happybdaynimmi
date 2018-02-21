@@ -78,10 +78,15 @@ app.post('/webhook', function (req, res) {
                     console.log("message: ", messagingEvent);
                     if (messagingEvent.message.attachments != undefined){
                         messagingEvent.message.attachments.forEach(function (attachment) {
-                            console.log(attachment.payload.url);
+                            console.log("attachment url:",attachment.payload.url);
                         }) ;
                     }
-                    console.log("attachments: ", messagingEvent.message.attachments);
+                    if (messagingEvent.message.attachments != undefined) {
+                        messagingEvent.message.attachments.forEach(function (attachment) {
+                            console.log("attachment type:", attachment.payload.type);
+                            console.log("attachment url:", attachment.payload.url);
+                        });
+                    }
                     // receivedMessage(messagingEvent);
                     sendTextMessage(senderID, messagingEvent.message.text);
 

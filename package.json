@@ -2,10 +2,13 @@
   "name": "happybdaynimmi",
   "version": "1.0.0",
   "description": "wish happy bday to my sis Nimmi Verma",
-  "main": "index.js",
+  "main": "server.js",
+  "engines": {
+    "node": ">=8.9.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -18,9 +21,22 @@
   },
   "homepage": "https://github.com/vin-droid/happybdaynimmi#readme",
   "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "body-parser": "^1.18.2",
     "config": "^1.29.4",
     "express": "^4.16.2",
-    "request": "^2.83.0"
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-html-id": "^0.1.2",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "request": "^2.83.0",
+    "webpack": "^3.11.0",
+    "webpack-dev-server": "^2.11.1"
   }
 }
